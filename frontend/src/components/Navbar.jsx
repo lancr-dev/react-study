@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import '../styles/navbar.css';
 
 function Navbar() {
@@ -11,9 +13,9 @@ function Navbar() {
   return (
     <header className='navbar'>
       <div className='navbar-container'>
-        <a href='/' className='logo'>
+        <Link to='/' className='logo'>
           ReactFundamentals
-        </a>
+        </Link>
 
         <button
           className='menu-btn'
@@ -24,10 +26,13 @@ function Navbar() {
         </button>
 
         <nav className={menuOpen ? 'nav-links active' : 'nav-links'}>
-          <a href='/'>Home</a>
-          <a href='/'>About</a>
-          <a href='/'>Services</a>
-          <a href='/'>Contact</a>
+          <Link to='/' onClick={() => setMenuOpen(false)}>
+            Home
+          </Link>
+
+          <Link to='/about' onClick={() => setMenuOpen(false)}>
+            About
+          </Link>
         </nav>
       </div>
     </header>
