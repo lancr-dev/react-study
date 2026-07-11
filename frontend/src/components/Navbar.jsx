@@ -37,6 +37,10 @@ function Navbar() {
           <Link to='/products' onClick={() => setMenuOpen(false)}>
             Products
           </Link>
+
+          <Link to='/services' onClick={() => setMenuOpen(false)}>
+            Services
+          </Link>
         </nav>
       </div>
     </header>
