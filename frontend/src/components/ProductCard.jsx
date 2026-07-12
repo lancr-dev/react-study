@@ -1,6 +1,6 @@
 import '../styles/product-card.css';
 
-function ProductCard({ name, stock, price }) {
+function ProductCard({ name, stock, price, onBuy }) {
   return (
     <article className='product-card'>
       <h2>{name}</h2>
@@ -13,7 +13,7 @@ function ProductCard({ name, stock, price }) {
         ₱<span>{price}</span>
       </p>
 
-      <button>Buy Now</button>
+      <button onClick={onBuy}>Buy Now</button>
     </article>
   );
 }
